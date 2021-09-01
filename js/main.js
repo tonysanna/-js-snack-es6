@@ -39,29 +39,45 @@
 // Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
 
 
-let squadre = [
-    {nome: 'giuventus', punti: 0, falli: 0},
-    {nome: 'inda', punti: 0, falli: 0},
-    {nome: 'bilan', punti: 0, falli: 0},
-    {nome: 'acpicchia', punti: 0, falli: 0},
-    {nome: 'acdempoli', punti: 0, falli: 0},
-    {nome: 'lazie', punti: 0, falli: 0},
-    {nome: 'natoli', punti: 0, falli: 0},
-];
+// let squadre = [
+//     {nome: 'giuventus', punti: 0, falli: 0},
+//     {nome: 'inda', punti: 0, falli: 0},
+//     {nome: 'bilan', punti: 0, falli: 0},
+//     {nome: 'acpicchia', punti: 0, falli: 0},
+//     {nome: 'acdempoli', punti: 0, falli: 0},
+//     {nome: 'lazie', punti: 0, falli: 0},
+//     {nome: 'natoli', punti: 0, falli: 0},
+// ];
 
-console.log(squadre);
+// console.log(squadre);
 
-for (let key in squadre) {
-    squadre[key].punti = random(10,80);
-    squadre[key].falli = random(1,50);
-};
+// for (let key in squadre) {
+//     squadre[key].punti = random(10,80);
+//     squadre[key].falli = random(1,50);
+// };
 
-let club = [];
-for (let i = 0; i < squadre.length; i++) {
-    let { nome, falli} = squadre[i];
-    club.push({nome,falli});
-};
+// let club = [];
+// for (let i = 0; i < squadre.length; i++) {
+//     let { nome, falli} = squadre[i];
+//     club.push({nome,falli});
+// };
 
-function random(min,max) {
-    return Math.floor(Math.random() * max) + min;
+// function random(min,max) {
+//     return Math.floor(Math.random() * max) + min;
+// }
+
+const firstArray = [1, 2, 3, 4, 5, 6, 7,];
+console.log('Array inzio:');
+console.log(firstArray);
+
+function cutArray(array, a, b) {
+    const secondArray = array.filter((element, index) =>{
+        if (index => a && index <= b) return true;
+        return false;
+    });
+    return secondArray;
+
 }
+
+console.log('Array taglio');
+console.log(cutArray(firstArray, 2, 4));
